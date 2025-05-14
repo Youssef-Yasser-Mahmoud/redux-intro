@@ -29,15 +29,42 @@ function reducer(state = initialState, action) {
 
 const store = createStore(reducer);
 
-// without action creators --> and thats okay
-store.dispatch({ type: 'account/deposit', payload: 500 });
+// // without action creators --> and thats okay
+// store.dispatch({ type: 'account/deposit', payload: 500 });
+// console.log(store.getState());
+
+// store.dispatch({ type: 'account/withdraw', payload: 300 });
+// console.log(store.getState());
+
+// store.dispatch({ type: 'account/requestLoan', payload: { amount: 1000, purpose: 'Buy a car' } });
+// console.log(store.getState());
+
+// store.dispatch({ type: 'account/payLoan' });
+// console.log(store.getState());
+
+// With action creators
+
+function deposit(amount) {
+  return { type: 'account/deposit', payload: amount };
+}
+function withdraw(amount) {
+  return { type: 'account/withdraw', payload: amount };
+}
+function requestLoan(amount, purpose) {
+  return { type: 'account/requestLoan', payload: { amount, purpose } };
+}
+function payLoan() {
+  return { type: 'account/payLoan' };
+}
+
+store.dispatch(deposit(500));
 console.log(store.getState());
 
-store.dispatch({ type: 'account/withdraw', payload: 300 });
+store.dispatch(withdraw(300));
 console.log(store.getState());
 
-store.dispatch({ type: 'account/requestLoan', payload: { amount: 1000, purpose: 'Buy a car' } });
+store.dispatch(requestLoan(1000, 'Buy a car'));
 console.log(store.getState());
 
-store.dispatch({ type: 'account/payLoan' });
+store.dispatch(payLoan());
 console.log(store.getState());
