@@ -1,0 +1,162 @@
+/* AccountOperations.css */
+.operations {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.operations h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 700;
+  position: relative;
+}
+
+.operations h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputs > div {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.inputs > div:hover {
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.1);
+  transform: translateY(-3px);
+}
+
+.inputs label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #4b5563;
+  font-size: 1.1rem;
+}
+
+.inputs input,
+.inputs select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.inputs input:focus,
+.inputs select:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.inputs button {
+  padding: 0.8rem 1.2rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.inputs button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.inputs button:active {
+  transform: translateY(0);
+}
+
+.loan-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.loan-status span {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .operations {
+    padding: 1.5rem;
+    max-width: 90vw;
+  }
+
+  .operations h2 {
+    font-size: 1.5rem;
+  }
+
+  .inputs > div {
+    padding: 1.2rem;
+  }
+
+  .inputs label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .operations {
+    padding: 1.2rem;
+  }
+
+  .operations h2 {
+    font-size: 1.3rem;
+  }
+
+  .inputs > div {
+    padding: 1rem;
+  }
+
+  .inputs input,
+  .inputs select {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .inputs button {
+    width: 100%;
+    padding: 0.7rem;
+  }
+
+  .loan-status {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}

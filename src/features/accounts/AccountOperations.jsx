@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deposit, payLoan, requestLoan, withdraw } from './accountSlice';
+import './AccountOperations.css';
 
 function AccountOperations() {
   const [depositAmount, setDepositAmount] = useState('');
@@ -45,7 +46,7 @@ function AccountOperations() {
   }
 
   return (
-    <div>
+    <div className='operations'>
       <h2>Your account operations</h2>
       <div className='inputs'>
         <div>
@@ -79,7 +80,7 @@ function AccountOperations() {
         </div>
 
         {currentLoan > 0 && (
-          <div>
+          <div className='loan-status'>
             <span>Pay back ${currentLoan}</span>
             <button onClick={handlePayLoan}>Pay loan</button>
           </div>
