@@ -1,0 +1,54 @@
+/* Customer.css */
+.customer-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-size: 1.7rem;
+  color: #2e3856;
+  font-weight: 600;
+  max-width: 600px;
+  transition: all 0.3s ease;
+  border-left: 5px solid #4f46e5;
+}
+
+.customer-welcome:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.customer-welcome span {
+  font-size: 2.2rem;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .customer-welcome {
+    font-size: 1.5rem;
+    min-height: 100px;
+    padding: 1.5rem 1rem;
+  }
+
+  .customer-welcome span {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .customer-welcome {
+    font-size: 1.2rem;
+    min-height: 80px;
+    max-width: 92vw;
+    padding: 1.2rem 0.8rem;
+  }
+
+  .customer-welcome span {
+    font-size: 1.5rem;
+  }
+}
