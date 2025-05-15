@@ -100,7 +100,7 @@ This application uses a slice-based Redux architecture:
 1. Clone the repository
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Youssef-Yasser-Mahmoud/redux-into
    cd react-redux-bank
    ```
 
