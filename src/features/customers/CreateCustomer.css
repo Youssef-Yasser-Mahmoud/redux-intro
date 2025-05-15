@@ -1,0 +1,133 @@
+/* CreateCustomer.css */
+.create-customer-container {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-customer-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+}
+
+.create-customer-container h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 700;
+  position: relative;
+}
+
+.create-customer-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #4f46e5;
+  border-radius: 2px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputs > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputs label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-left: 0.2rem;
+}
+
+.inputs input {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  background: #f9fafb;
+}
+
+.inputs input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+button {
+  padding: 0.9rem 1.5rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .create-customer-container {
+    padding: 2rem;
+    max-width: 90vw;
+  }
+
+  .create-customer-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-customer-container {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .create-customer-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .inputs input {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+  }
+}

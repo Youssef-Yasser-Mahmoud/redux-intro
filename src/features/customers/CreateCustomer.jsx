@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createCustomer } from './customerSlice';
+import './CreateCustomer.css';
 
-function Customer() {
+function CreateCustomer() {
   const [fullName, setFullName] = useState('');
   const [nationalId, setNationalId] = useState('');
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ function Customer() {
   }
 
   return (
-    <div>
+    <div className='create-customer-container'>
       <h2>Create new customer</h2>
       <div className='inputs'>
         <div>
@@ -31,4 +32,4 @@ function Customer() {
   );
 }
 
-export default Customer;
+export default CreateCustomer;
